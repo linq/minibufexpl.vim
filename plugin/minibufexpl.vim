@@ -1330,7 +1330,7 @@ function! <SID>AutoUpdate(delBufNum,currBufName)
 
   " Don't bother autoupdating the MBE window, and skip the FuzzyFinder window
   " (Thanks toupeira!)
-  if (bufname('%') == '-MiniBufExplorer-' || bufname('%') == '[fuf]' || bufname('%') == '')
+  if (bufname('%') == '-MiniBufExplorer-' || bufname('%') == '[fuf]' || bufname('%') == '__Tag_List__'|| bufname('%') == '')
     " If this is the only buffer left then toggle the buffer
     if (winbufnr(2) == -1)
         call <SID>CycleBuffer(1)
